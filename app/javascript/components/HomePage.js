@@ -6,7 +6,7 @@ const HomePage = () => {
     <>
           <h1>Welcome to Hello Rails React app</h1>
           <p>This app uses Rails framework for backend and React for frontend</p>
-          <Link to="/greetings" className="btn-primary btn">
+          <Link to="/greeting" className="btn-primary btn">
             Greetings
           </Link>
     </>

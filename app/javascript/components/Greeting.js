@@ -10,6 +10,7 @@ function Greeting() {
   }, []);
   return (
     <div>
+      <h1>Greeting</h1>
       <h2>{greetings}</h2>
       <button
         onClick={() => {
