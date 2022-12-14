@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchGreeting } from '../redux/greetings/greeting';
 
 function Greeting() {
@@ -9,10 +10,14 @@ function Greeting() {
     dispatch(fetchGreeting());
   }, []);
   return (
-    <div>
-      <h1>Greeting</h1>
-      <h2>{greetings}</h2>
+    <div className="container py-5 g-3">
+      <Link to="/" className="btn-primary btn">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </Link>
+
+      <h2 className="mt-3">{greetings}</h2>
       <button
+        className="btn btn-success"
         onClick={() => {
           dispatch(fetchGreeting());
         }}
